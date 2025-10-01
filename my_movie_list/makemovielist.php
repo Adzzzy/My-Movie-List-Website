@@ -1,4 +1,3 @@
-
 <?php
 	require "header.php";
 	include 'includes/dbh.inc.php';
@@ -23,7 +22,8 @@
 				movie.push(document.getElementById("movie_input").value);
 				var movieAsString = movie.join('<br/>');
 				document.getElementById("movie_result").innerHTML = movieAsString;
-				document.getElementById("movie_array").value = movie;
+				document.getElementById("movie_array").value = movie.join(", "); //Set to the contents of movie array separated by a comma and space
+				document.getElementById("movie_input").value = "";
 			}
 		</script>
 	<?php 

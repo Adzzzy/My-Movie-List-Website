@@ -32,10 +32,10 @@ header {
 	color: #FFFFFF;
 	font-weight: bold;
 	text-align: undefined;
-	width: 10%;
 	float: left;
 	margin-top: 15px;
 	margin-left: 25px;
+	margin-right: 100px;
 	letter-spacing: 2px;
 }
 
@@ -71,12 +71,32 @@ ul li a {
 	text-decoration: none;
 }
 
-ul li:hover a {
+ul li a:hover {
 	color: #9B9B9B;
 }
 
-.login {
+/*.login {
 	
+}*/
+
+#error {
+	padding-left: 2rem;
+	color: rgb(64, 18, 18);
+	font-size: 75%;
+}
+
+#success {
+	padding-left: 0.6rem;
+	color: rgb(18, 64, 39);
+	font-size: 75%;
+}
+
+#inputpwd {
+	margin-bottom: 0.1em;
+}
+
+#logout {
+	margin-top: 0.75em;
 }
 
 .signup {
@@ -97,9 +117,9 @@ ul li:hover a {
 	font-style: italic;
 }
 
-.signup form {
+/*.signup form {
 	
-}
+}*/
 
 .signup button {
 	margin: auto;
@@ -221,7 +241,7 @@ ul li:hover a {
 	text-align: center;
 	padding-top: 140px;
 	padding-bottom: 140px;
-	text-size: 150%;
+	font-size: 125%;
 }
 
 .browse {
@@ -276,6 +296,7 @@ ul li:hover a {
 	letter-spacing: 2px;
 	font-size: 15px;
 	float: left;
+	padding-top: 0.1em;
 }
 
 #signups:hover {

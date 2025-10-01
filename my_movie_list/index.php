@@ -29,7 +29,7 @@
 			</div>
 		<div class="firstdes" id="fdes">
 			<h2>Unlimited Lists</h2>
-			<p>Using this website, you can make as many movie lists that you would like. There is no limit to the amount of lists that you can make so you can go nuts making all kinds of movie lists. Each list is dated so you can also keep track of when you made each of your lists. There is also no limit to the amount of movies that you can add to each list either so you can  make as many lists including as many movies that you want. The only limit is your imagination (and willingness to make each movie list).</p>
+			<p>Using this website, you can make as many movie lists as you would like. There is no limit to the amount of lists that you can make so you can go nuts making all kinds of movie lists. Each list is dated so you can also keep track of when you made each of your lists. There is also no limit to the amount of movies that you can add to each list either so you can  make as many lists including as many movies that you want. The only limit is your imagination (and willingness to make each movie list).</p>
 			</div>
 		<div class="firstdes">
 			<h2>Public Lists</h2>

@@ -1,0 +1,45 @@
+#version: '3.8'
+
+services:
+  server:
+    image: nginx:alpine
+    ports:
+      - "8080:80" #Port 8080 on host machine will map to port 80 (port the server is listening on) in nginx container
+    volumes:
+      - ./my_movie_list:/var/www/public #Match the location set as root in site.conf
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf #The conf.d directory holds additional config files. Overwrite default.conf there with our default.conf
+    depends_on: #Makes other services start before nginx server
+      - php
+      - db
+    #in case of crash, will start back up again
+    restart: unless-stopped
+  
+  php:
+    build: #Will build php image from dockerfile so that custom configurations and php packages can be specified from there
+      context: ./docker/php
+    volumes:
+      - ./my_movie_list:/var/www/public
+    restart: unless-stopped
+
+  db:
+    image: mysql:9
+    volumes: 
+      - ./database:/docker-entrypoint-initdb.d #map the sql files containing the queries for creating the database and tables into docker-entrypoint-initdb.d (a directory automatically executed database initialisation scripts that only run if the database directory is empty)
+      - db-data:/var/lib/mysql #maps the persistent volume db-data to the directory that mysql stores database files within the container
+    environment:
+      #For demonstration purposes will have root password set to empty.
+      #If running using xampp instead, the default root password is also empty by default there.
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_DATABASE: mymovielist
+      #can create another user too if need be
+      #MYSQL_USER: user
+      #MYSQL_PASSWORD: userpass
+
+    restart: unless-stopped
+
+#create a persistent volume for storing database data
+volumes:
+  db-data:
+
+#A bridge type network is created by default for the containers to be able to communicate with eachother
