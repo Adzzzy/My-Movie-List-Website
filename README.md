@@ -1,8 +1,11 @@
 # My Movie List
 A website made in Year 12 IT in a team of 2 which allows users to make an account, log in, and create and view movie lists made by themselves and others.
 
-The website uses PHP, MySQL, HTML, CSS and JavaScript. XAMPP was used to create a local web server to develop and test the website on.
-The website includes some basic security measures such as password salting, hashing using Bcrypt verison 2y, and the use of prepared statements to prevent SQL Injections.
+The website uses PHP, MySQL, HTML, CSS and JavaScript. XAMPP was used to create a local web server and database to develop and test the website on. The web app has also been containerized and migrated to a multi-container Docker setup configured with Docker Compose.
+
+The website includes fundamental security measures such as password salting, hashing using Bcrypt verison 2y, and the use of prepared statements to prevent SQL Injections. The database has also undergone normalization for preventing redundant data and improving data integrity.
+Input validation is also performed as part of the sign-up process, with checks in place to 
+ensure correct formatting of email addresses, unique usernames & emails, and correctly typed passwords.
 
 ## Usage
 ### Running using Docker Compose
@@ -40,7 +43,7 @@ Another easy way to host the web app is by using XAMPP. With this method all the
 - Run the XAMPP installer. It is recommended to keep the default settings for the install for less set-up later.
   - If you installed XAMPP in a different location, you can execute the setup_xampp.bat file on Windows to automatically update configurational information.
 
-**Set-up website files**
+**Set up website files**
 - Head to the installation location (default is root directory, i.e. C: in Windows) and open the "xampp" folder.
 - Open the "htdocs" folder, delete everything inside and replace it with the contents of the "my_movie_list" folder (i.e. the php files, includes folder, images folder, and css folder).
 

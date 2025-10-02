@@ -13,7 +13,7 @@ USE `mymovielist`;
 CREATE TABLE IF NOT EXISTS `users` (
   `idUsers` int(11) NOT NULL UNIQUE AUTO_INCREMENT,
   `uidUsers` varchar(255) NOT NULL UNIQUE,
-  `emailUsers` varchar(255) NOT NULL,
+  `emailUsers` varchar(255) NOT NULL UNIQUE,
   `pwdUsers` varchar(255) NOT NULL,
   PRIMARY KEY (`idUsers`)
 );

@@ -27,7 +27,7 @@ session_start();
 			<?php 
 				$error = $_GET['error'] ?? ''; //Check the url for a parameter by the name of error, if none then set $error to empty
 				$errorMessage = '';
-				if ($error == "emptyfields") {
+				if ($error == "emptyfieldslogin") {
 					$errorMessage = "Login Failed: Make sure no fields are empty!";
 				}
 				else if ($error == "nouser") {
