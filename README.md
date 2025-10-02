@@ -1,9 +1,10 @@
 # My Movie List
-A website made in Year 12 IT in a team of 2 which allows users to make an account, log in, and create and view movie lists made by themselves and others.
+A website made in Year 12 IT in a team of two that allows users to make an account, log in, and create & view movie lists made by themselves and others.
 
 The website uses PHP, MySQL, HTML, CSS and JavaScript. XAMPP was used to create a local web server and database to develop and test the website on. The web app has also been containerized and migrated to a multi-container Docker setup configured with Docker Compose.
 
-The website includes fundamental security measures such as password salting, hashing using Bcrypt verison 2y, and the use of prepared statements to prevent SQL Injections. The database has also undergone normalization for preventing redundant data and improving data integrity.
+The website includes fundamental security measures such as password salting, hashing using Bcrypt version 2y, and the use of prepared statements to prevent SQL Injections. The database has also undergone normalization for preventing redundant data and improving data integrity.
+
 Input validation is also performed as part of the sign-up process, with checks in place to 
 ensure correct formatting of email addresses, unique usernames & emails, and correctly typed passwords.
 
@@ -23,7 +24,7 @@ The web application can be hosted using Docker Compose to build containers for e
 - Open up any terminal or shell. On Windows, Mac, or Linux simply search "Terminal" and open it up. You could also search for "Command Prompt" or "PowerShell" instead on Windows.
 - Navigate to the location where you've stored the web app. Do this using the "cd" command.  E.g. if the files are in your downloads folder: `cd C:\Users\<UserName>\Downloads\My-Movie-List-Website`. The correct directory will contain the "docker-compose.yml" file.
   - Alternatively, navigate to the directory in the file explorer, then right-click within the folder while holding Shift, and select "Open in Terminal" or "Open PowerShell window here". 
-- From here, run the web app with the following command:
+- From here, start the web app with the following command:
 
      ```console
      docker compose up -d
@@ -36,7 +37,7 @@ Note: If the website has trouble connecting to the database, make sure that in t
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 ### Hosting using XAMPP
-Another easy way to host the web app is by using XAMPP. With this method all the necessary services are provided by XAMPP and all run within the same environment on your device. 
+Another easy way to host the web app is by using XAMPP. With this method, all the necessary services are provided by XAMPP, and they all run within the same environment on your device. 
 
 **Get XAMPP**
 - Head to https://www.apachefriends.org/download.html and choose a download compatible with your operating system.
@@ -50,7 +51,7 @@ Another easy way to host the web app is by using XAMPP. With this method all the
 **Initialise the database**
 - Go to the "xampp" folder and open the "xampp-control.exe" executable. Press the "Start" buttons for both the "Apache" and the "MySQL" modules.
 - Head to the database administration page at: http://localhost/phpmyadmin/
-- Select "Import" from the toolbar at the top of the page. Press "Browse" and select the "mymovielist.sql" file from the "database" folder among the downloaded repository files. Then, scroll down to the bottom and press "Import".
+- Select "Import" from the toolbar at the top of the page. Press "Browse" and select the "mymovielist.sql" file from the "database" folder among the downloaded files of this repository. Then, scroll down to the bottom and press "Import".
 - Optional: Repeat the above steps with the "testdata.sql" file to populate the database with some sample data.
 - Go back to "htdocs" and open the "dbh.inc.php" file from inside the "includes" folder. Edit the line specifying "$servername" to say: `$servername = "localhost";`
 
